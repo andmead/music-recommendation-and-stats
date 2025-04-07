@@ -1,0 +1,8 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+    <h1>Top 10 Songs From {{ artist_name.name }}</h1>
+    {% for track in artist_tracks %}
+        <p>#{{ forloop.counter }}: {{ track }}</p>
+    {% endfor %}
+{% endblock %}

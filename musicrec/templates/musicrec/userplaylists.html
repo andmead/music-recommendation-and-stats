@@ -1,0 +1,9 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+
+    {% for p in pl_list %}
+        <a href="{% url 'playlistview' p.id %}">{{ p.name }}</a><br>
+    {% endfor %}
+
+{% endblock %}

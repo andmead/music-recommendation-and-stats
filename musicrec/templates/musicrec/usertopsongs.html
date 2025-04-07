@@ -1,0 +1,25 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+    <h2>{{ user_name }}'s Statistics</h2>
+    <div id="btnContainer">
+        <button onclick="setChartType('doughnut')" type="button" class="btn btn-outline-success" id="genreBtn">Top 5 Most Recent Genres</button>
+        <button type="button" class="btn btn-outline-success" id="recentSongBtn">Recent Favorite Songs</button>
+        <button type="button" class="btn btn-outline-success" id="recentArtistsBtn">Recent Favorite Artists</button>
+        <button onclick="setChartType('bar')" type="button" class="btn btn-outline-success" id="songsByArtistsBtn">Number of Songs By Artists in Recent Favorites</button>
+    </div>   
+
+    <div id="userTopMainContainer">
+
+        <div id="chartContainer">
+            <div>
+                <canvas id="myChart" width="900" height="500"></canvas>
+            </div>
+        </div>
+
+        <div id="userTopSongsContainer"></div>
+
+        <div id="userTopArtistsContainer"></div>
+    </div>
+
+{% endblock %}

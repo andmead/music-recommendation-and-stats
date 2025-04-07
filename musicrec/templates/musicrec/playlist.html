@@ -1,0 +1,14 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+    <h1>Some of the songs in "{{ playlist_name }}"</h1>
+    {% for song in playlist_tracks %}
+       {% for artist in song.track.artists %}
+            {% if song.track.artists|length > 1 %}
+                    {{artist.name}}{% if not forloop.last %}, {% endif %}  
+            {% else %}
+                    {{artist.name}}
+            {% endif %}
+        {% endfor %} - {{song.track.name}}<br>
+    {% endfor %}
+{% endblock %}

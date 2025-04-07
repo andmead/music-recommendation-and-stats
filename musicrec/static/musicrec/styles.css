@@ -1,0 +1,61 @@
+body {
+    background-color: rgb(14, 14, 14);
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.searchBar {
+    filter: invert(1);
+    
+}
+
+a {
+    color: rgb(60, 255, 42);
+}
+
+a:hover {
+    color: grey;
+}
+
+
+#cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+    gap: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 225px;
+}
+
+
+#userTopMainContainer {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+#create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#create-container input, textarea, select {
+    filter: invert(1);
+}
+
+#btnContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+

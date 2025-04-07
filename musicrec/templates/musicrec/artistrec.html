@@ -1,0 +1,9 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+    <h1>Recommendations based on your listening history:</h1>
+    {% for rec in recommendations %}
+        <p>{{ rec.artists.0.name }} - {{ rec.name }}</p>
+    {% endfor %}
+    
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "musicrec/layout.html" %}
+{% load static %}
+{% block body %}
+    <div id="jumboContainer">
+        <div class="jumbotron jumbotron-fluid" style="background-color: rgba(25, 25, 25, 0.32);">
+            <div class="container">
+            <h1 class="display-4" style="color: rgb(60, 255, 42);">Welcome to Streamboat!</h1>
+            <p class="lead">Using Spotify's API, Streamboat is here to help you find new artists to listen to, or create new playlists!</p>
+            </div>
+        </div>
+    </div>
+    
+    <h2 style="margin-top: 7%; color: rgb(60, 255, 42);">What can I do with Streamboat?</h2>
+
+    <div id="cardContainer">
+        <div class="card text-center" style="width: 18rem; background-color: rgb(25, 25, 25);">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(60, 255, 42);">Recommendations</h5>
+              <p class="card-text">Using data on artists you've been listening to lately, we will recommend you some songs to listen to!</p>
+              <a href="{% url 'login' %}?next={% url 'recommend' %}" class="btn btn-outline-success">Proceed</a>
+            </div>
+          </div>
+
+          <div class="card text-center" style="width: 18rem; background-color: rgb(25, 25, 25);">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(60, 255, 42);">Make A New Playlist</h5>
+              <p class="card-text">Create a new playlist with new song recommendations from Streamboat!</p>
+              <a href="{% url 'login' %}?next={% url 'createplaylist' %}" class="btn btn-outline-success">Proceed</a>
+            </div>
+          </div>
+
+          <div class="card text-center" style="width: 18rem; background-color: rgb(25, 25, 25);">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(60, 255, 42);">View Your Statistics</h5>
+              <p class="card-text">Take a look at the songs, or artists you've been listening to the most!</p>
+              <a href="{% url 'login' %}?next={% url 'statistics' %}" class="btn btn-outline-success">Proceed</a>
+            </div>
+          </div>
+
+          <div class="card text-center" style="width: 18rem; background-color: rgb(25, 25, 25);">
+            <div class="card-body">
+              <h5 class="card-title" style="color: rgb(60, 255, 42);">Your Playlists</h5>
+              <p class="card-text">View the current playlists you've made on Spotify!</p>
+              <a href="{% url 'login' %}?next={% url 'userplaylists' %}" class="btn btn-outline-success">Proceed</a>
+            </div>
+          </div>
+    </div>
+
+    
+{% endblock %}
