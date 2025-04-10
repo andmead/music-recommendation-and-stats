@@ -179,7 +179,3 @@ The Dockerfile needed to run the container. Created with the docker init command
 ## compose.yaml
 
 The compose file for Docker, needed for running the container, also created when running docker init command.
-
-## package.json, package-lock.json, and node_modules
-
-All three of these were installed along with Chart.js when installing via npm install command.
